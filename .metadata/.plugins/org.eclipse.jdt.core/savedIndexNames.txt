@@ -1,3 +1,0 @@
-INDEX VERSION 1.126+/Users/Gary/Desktop/YEG_Weekend/.metadata/.plugins/org.eclipse.jdt.core
-237290305.index
-2458134755.index
