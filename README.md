@@ -1,4 +1,4 @@
-AR Travel Guide
+#AR Travel Guide
 
 THINGS THAT WERE CHANGED
 - Removed all instances of stones and chips in code
