@@ -7,6 +7,7 @@ package com.qualcomm.vuforia.samples.VideoPlayback.app.VideoPlayback;
 
 import java.util.Vector;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -66,9 +67,8 @@ public class VideoPlayback extends Activity implements
     private SimpleOnGestureListener mSimpleListener = null;
     
     // Movie for the Targets:
-    public static final int NUM_TARGETS = 2;
-    public static final int STONES = 0;
-    public static final int CHIPS = 1;
+    public static final int NUM_TARGETS = 1;
+    public static final int YEG_TARGET = 0;
     private VideoPlayerHelper mVideoPlayerHelper[] = null;
     private int mSeekPosition[] = null;
     private boolean mWasPlaying[] = null;
@@ -144,8 +144,7 @@ public class VideoPlayback extends Activity implements
             mVideoPlayerHelper[i].setActivity(this);
         }
         
-        mMovieName[STONES] = "VideoPlayback/VuforiaSizzleReel_1.m4v";
-        mMovieName[CHIPS] = "VideoPlayback/VuforiaSizzleReel_2.m4v";
+        mMovieName[YEG_TARGET] = "VideoPlayback/threeboars.m4v";
         
         // Set the double tap listener:
         mGestureDetector.setOnDoubleTapListener(new OnDoubleTapListener()
@@ -258,12 +257,11 @@ public class VideoPlayback extends Activity implements
     private void loadTextures()
     {
         mTextures.add(Texture.loadTextureFromApk(
-            "VideoPlayback/VuforiaSizzleReel_1.png", getAssets()));
-        mTextures.add(Texture.loadTextureFromApk(
-            "VideoPlayback/VuforiaSizzleReel_2.png", getAssets()));
+        	"VideoPlayback/threeboars.png", getAssets())); 
         mTextures.add(Texture.loadTextureFromApk("VideoPlayback/play.png",
             getAssets()));
-        mTextures.add(Texture.loadTextureFromApk("VideoPlayback/busy.png",
+        // @ERROR Was busy state, using busy.png, changed to play.png temp
+        mTextures.add(Texture.loadTextureFromApk("VideoPlayback/play.png",
             getAssets()));
         mTextures.add(Texture.loadTextureFromApk("VideoPlayback/error.png",
             getAssets()));
@@ -360,7 +358,8 @@ public class VideoPlayback extends Activity implements
     
     
     // Called when the system is about to start resuming a previous activity.
-    protected void onPause()
+    @SuppressLint("NewApi")
+	protected void onPause()
     {
         Log.d(LOGTAG, "onPause");
         super.onPause();
@@ -592,7 +591,7 @@ public class VideoPlayback extends Activity implements
         }
         
         // Load the data sets:
-        if (!dataSetStonesAndChips.load("StonesAndChips.xml",
+        if (!dataSetStonesAndChips.load("yeg_weekend.xml",
             DataSet.STORAGE_TYPE.STORAGE_APPRESOURCE))
         {
             Log.d(LOGTAG, "Failed to load data set.");
@@ -813,7 +812,8 @@ public class VideoPlayback extends Activity implements
     }
     
     
-    @Override
+    @SuppressLint("NewApi")
+	@Override
     public boolean menuProcess(int command)
     {
         
