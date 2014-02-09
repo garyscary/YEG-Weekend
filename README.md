@@ -13,3 +13,8 @@ BUGS
 NOTES
 - Had to suppress two methods that were giving jelly bean errors (api 14)
 
+OUTPUT WARNINGS/ERRORS
+02-09 02:24:41.047: E/qdutils(1473): FBIOGET_FSCREENINFO failed
+02-09 02:25:38.619: E/MediaPlayer(1473): Should have subtitle controller already set
+
+
