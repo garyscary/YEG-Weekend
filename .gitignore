@@ -1,2 +1,7 @@
-AR_travel_guide/vuforia-sdk-android-2-8-7/*
-AR_travel_guide\gen\*
+AR_travel_guide/gen/*
+AR_travel_guide/vuforia-sdk-android-2-8-7/samples/BackgroundTextureAccess-2-8-8/*
+AR_travel_guide/vuforia-sdk-android-2-8-7/samples/Books-2-8-8/*
+AR_travel_guide/vuforia-sdk-android-2-8-7/samples/Dominoes-2-8-8/*
+AR_travel_guide/vuforia-sdk-android-2-8-7/samples/ImageTargetsNative-2-8-8/*
+AR_travel_guide/vuforia-sdk-android-2-8-7/samples/OcclusionManagement-2-8-8/*
+AR_travel_guide/vuforia-sdk-android-2-8-7/samples/VuforiaSamples-2-8-8/*
